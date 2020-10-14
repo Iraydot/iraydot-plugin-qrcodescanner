@@ -1,0 +1,25 @@
+{
+  "name": "iraydot-plugin-qrcodescanner",
+  "version": "0.0.1",
+  "description": "二维码扫描插件",
+  "cordova": {
+    "id": "iraydot-plugin-qrcodescanner",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iraydot/iraydot-plugin-qrcodescanner"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "iraydot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iraydot/iraydot-plugin-qrcodescanner/issues"
+  },
+  "homepage": "https://github.com/iraydot/iraydot-plugin-qrcodescanner#readme"
+}

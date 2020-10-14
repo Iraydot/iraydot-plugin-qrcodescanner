@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="iraydot-plugin-qrcodescanner" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>QRcodeScanner</name>
+    <js-module name="QRcodeScanner" src="www/qrcodescanner.js">
+        <clobbers target="cordova.plugins.qrcodeScanner" />
+    </js-module>
+    <platform name="android">
+        <source-file src="src/android/com/iraydot/plugins/qrcodescanner/QRcodeScanner.java" target-dir="src/com/iraydot/plugins/qrcodescanner" />
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="QRcodeScanner">
+                <param name="android-package" value="com.iraydot.plugins.qrcodescanner.QRcodeScanner" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.iraydot.qrcodescanner.ScanActivity" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:windowSoftInputMode="stateAlwaysHidden" android:exported="false" />
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.FLASHLIGHT" />
+            <uses-feature android:name="android.hardware.camera" android:required="true" />
+        </config-file>
+        <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference" />
+        <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION" />
+        <lib-file src="src/android/qrcodecore-release.aar" />
+        <lib-file src="src/android/zbar-release.aar" />
+        <lib-file src="src/android/qrcodescanner-release.aar" />
+        <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+" />
+    </platform>
+</plugin>
