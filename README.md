@@ -1,0 +1,1 @@
+# iraydot-plugin-qrcodescanner
