@@ -1,6 +1,6 @@
 {
   "name": "iraydot-plugin-qrcodescanner",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "二维码扫描插件",
   "cordova": {
     "id": "iraydot-plugin-qrcodescanner",
